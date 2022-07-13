@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+ 
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Results</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'plagiarism/css/bootstrap.css' %}"/>
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="{% static 'plagiarism/css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'plagiarism/css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="/plagiarism/">
+            <span>
+              GBPUAT SIMILARITY CHECKER
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
+             
+              <ul class="navbar-nav  mr-5">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="/accounts/login">
+                    {% if username %}
+                    <span>{{ username }} </span>
+                    {% else %}
+                    <span>Login </span> 
+                    {% endif %}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="/plagiarism/">Home</a>
+                <a href="/plagiarism/checker">Plagiarism Checker</a>
+                <a href="/plagiarism/about">About</a>
+                <a href="/accounts/logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- who section -->
+  <section class="who_section layout_padding">
+    <div class="container who_container">
+      <div class="who_img-box">
+       <center> <img src="{% static 'plagiarism/images/pc.jpg' %}" alt="" style="width:250px;height:250px; border-radius: 5%;"/></center>
+      </div>
+      <div class="who_deail-box">
+        <h2>
+          What is Similarity Checker
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodonisi ut aliquip ex ea commodo
+        </p>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end who section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container info_content">
+      <div>
+        <center><h2 style="color:gold; margin:20px">OUR TEAM</h2></center>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="d-flex">
+              <img src="{% static 'plagiarism/images/53520.jpeg' %}" style="width: 300px;height:300px;"/>
+            </div>
+            <div class="d-flex ">
+              <p style="color:white">Romel Bijalwan (53520)</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex">
+              <img src="{% static 'plagiarism/images/53507.jpeg' %}" style="width: 300px;height:300px;"/>
+            </div>
+            <div class="d-flex ">
+              <p style="color:white">Devanshu Bhat (53507)</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex">
+              <img src="{% static 'plagiarism/images/53513.jpeg' %}" style="width: 300px;height:300px;"/>
+            </div>
+            <div class="d-flex ">
+              <p style="color:white">Lokesh Negi (53513)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+        <div class="social-box">
+          <a href="">
+            <img src="images/fb.png" alt="" />
+          </a>
+
+          <a href="">
+            <img src="images/twitter.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/linkedin1.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/instagram1.png" alt="" />
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>

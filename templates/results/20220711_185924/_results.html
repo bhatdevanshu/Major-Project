@@ -1,0 +1,47 @@
+{% extends "plagiarism/base.html" %}
+{% block content %}
+<table style=" table-layout: fixed;  border: 1px solid;
+  width: 70%;
+  border-collapse: collapse;
+  border: 3px solid purple;">
+ <tbody>
+  <tr>
+   <td style="background-color: #7cd1de;  padding: 20px;  border: 1px solid;">
+    Result HeatMap
+   </td>
+   <td style="background-color: #7cd1de;  padding: 20px;  border: 1px solid;">
+    New Text Document - Copy.txt
+   </td>
+   <td style="background-color: #7cd1de;  padding: 20px;  border: 1px solid;">
+    New Text Document.txt
+   </td>
+  </tr>
+  <tr>
+   <td style="background-color: #7cd1de;  padding: 20px;  border: 1px solid;">
+    New Text Document - Copy.txt
+   </td>
+   <td style="background-color: #fac2b6;  padding: 20px;  border: 1px solid;">
+    -1
+   </td>
+   <td style="background-color: #B1D9A3;  padding: 20px;  border: 1px solid;">
+    <a href="results\20220711_185924_0" style="color:black" target="_blank">
+     ('neutral', ' 0.71%')
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td style="background-color: #7cd1de;  padding: 20px;  border: 1px solid;">
+    New Text Document.txt
+   </td>
+   <td style="background-color: #FCBABA;  padding: 20px;  border: 1px solid;">
+    <a href="results\20220711_185924_1" style="color:black" target="_blank">
+     ('entailment', ' 0.78%')
+    </a>
+   </td>
+   <td style="background-color: #fac2b6;  padding: 20px;  border: 1px solid;">
+    -1
+   </td>
+  </tr>
+ </tbody>
+</table>
+{% endblock %}

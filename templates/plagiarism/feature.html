@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>GBPUAT TEXT SIMILARITY CHECKER</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="#">
+            <span>
+              GBPUAT SIMILARITY CHECKER
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
+              <form class="form-inline mb-3 mb-lg-0 ">
+                <button class="btn  my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+              <ul class="navbar-nav  mr-5">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="/accounts/login">
+                    {% if username %}
+                    <span>{{ username }} </span>
+                    {% else %}
+                    <span>Login </span>
+                    {% endif %}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="/plagiarism/">Home</a>
+                <a href="/plagiarism/checker">Plagiarism Checker</a>
+                <a href="/plagiarism/about">About</a>
+                <a href="/accounts/logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+
+  <!-- feature section  -->
+  <section class="feature_section layout_padding">
+    <div class="container">
+      <h2 class="text-uppercase">
+        Our Features
+      </h2>
+    </div>
+    <div class="">
+      <div class="feature_card-container layout_padding2">
+        <div class="feature_card">
+          <div class="feature_img-container">
+            <div class="feature_img-box">
+              <img src="images/f1.png" alt="" />
+            </div>
+          </div>
+          <div class="feature_detail-box">
+            <h4>
+              CLEAN CODES
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse
+            </p>
+          </div>
+        </div>
+        <div class="feature_card">
+          <div class="feature_img-container">
+            <div class="feature_img-box">
+              <img src="images/f2.png" alt="" />
+            </div>
+          </div>
+          <div class="feature_detail-box">
+            <h4>
+              PERFECT SHOWCASE
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse
+            </p>
+          </div>
+        </div>
+        <div class="feature_card">
+          <div class="feature_img-container">
+            <div class="feature_img-box">
+              <img src="images/f3.png" alt="" />
+            </div>
+          </div>
+          <div class="feature_detail-box">
+            <h4>
+              FREE FONT
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse
+            </p>
+          </div>
+        </div>
+        <div class="feature_card">
+          <div class="feature_img-container">
+            <div class="feature_img-box">
+              <img src="images/f4.png" alt="" />
+            </div>
+          </div>
+          <div class="feature_detail-box">
+            <h4>
+              HIGH RESOLUTION
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end feature section -->
+
+  <section class="who_section layout_padding">
+    <div class="container who_container">
+      <div class="who_img-box">
+       <center> <img src="{% static 'plagiarism/images/pc.jpg' %}" alt="" style="width:250px;height:250px; border-radius: 5%;"/></center>
+      </div>
+      <div class="who_deail-box">
+        <h2>
+          What is Similarity Checker
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodonisi ut aliquip ex ea commodo
+        </p>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end who section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container info_content">
+      <div>
+        <center><h2 style="color:gold; margin:20px">OUR TEAM</h2></center>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="d-flex">
+              <img src="{% static 'plagiarism/images/about.jpg' %}"/>
+            </div>
+            <div class="d-flex ">
+              <p style="color:white">asdf</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex">
+              <img src="{% static 'plagiarism/images/about.jpg' %}"/>
+            </div>
+            <div class="d-flex ">
+              <p style="color:white">asdf</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex">
+              <img src="{% static 'plagiarism/images/about.jpg' %}"/>
+            </div>
+            <div class="d-flex ">
+              <p style="color:white">asdf</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+        <div class="social-box">
+          <a href="">
+            <img src="images/fb.png" alt="" />
+          </a>
+
+          <a href="">
+            <img src="images/twitter.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/linkedin1.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/instagram1.png" alt="" />
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>

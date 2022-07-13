@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>GBPUAT TEXT SIMILARITY CHECKER</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'plagiarism/css/bootstrap.css' %}"/>
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="{% static 'plagiarism/css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'plagiarism/css/responsive.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="#">
+              <span>
+                GBPUAT SIMILARITY CHECKER
+              </span>
+            </a>
+
+            <div class="navbar-collapse" id="">
+              <div
+                class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3"
+              >
+                <ul class="navbar-nav  mr-5">
+                  <li class="nav-item mr-5">
+                    <a class="nav-link" href="/accounts/login">
+                      {% if username %}
+                      <span>{{ username }} </span>
+                      {% else %}
+                      <span>Login </span>
+                      {% endif %}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="custom_menu-btn">
+                <button onclick="openNav()">
+                  <span class="s-1"> </span>
+                  <span class="s-2"> </span>
+                  <span class="s-3"> </span>
+                </button>
+              </div>
+              <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="/plagiarism/">Home</a>
+                  <a href="/plagiarism/checker">Plagiarism Checker</a>
+                  <a href="/plagiarism/about">About</a>
+                  <a href="/accounts/logout">Logout</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class=" slider_section position-relative">
+        <div class="container">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="slider_item-box">
+                  <div class="slider_item-container">
+                    <div class="slider_item-detail">
+                      <h1>
+                          MAKING BETTER PLAGIARISM SOFTWARE
+                      </h1>
+                      <p>
+                        For the teachers of University.
+                      </p>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- end slider section -->
+    </div>
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding">
+      <div class="container">
+        <h2 class="text-uppercase">
+          How it works
+        </h2>
+      </div>
+
+      <div class="container">
+        <div class="about_card-container layout_padding2-top">
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="{% static 'plagiarism/images/work1.png' %}" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  TEXT SIMILARITY DETECTION
+                </h4>
+                <p>
+                  Uses the best industry algorithms like BERT and Sequence Matcher to give quick and effective assignment plagiarism detection
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="{% static 'plagiarism/images/work2.png' %}" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  OCR FACILITY
+                </h4>
+                <p>
+                  Uses Machine Learning to convert image assignments submitted by students into text format
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="{% static 'plagiarism/images/work3.png' %}" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  EASY TO USE
+                </h4>
+                <p>
+                  Well documented and user-centric User Interface (UI) that makes the task of assignment checking easy
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end about section -->
+
+    <!-- who section -->
+    <section class="who_section">
+      <br>
+      <div class="container who_container">
+        <div class="who_img-box">
+          <center> <img src="{% static 'plagiarism/images/pc.jpg' %}" alt="" style="width:250px;height:250px; border-radius: 5%;"/></center>
+     </div>
+        <div class="who_deail-box">
+          <h2>
+            What is GBPUAT SIMILARITY CHECKER
+          </h2>
+          <p>
+            Gbpuat Text Similarity Checker system is a web app that uses text similarity algorithms, OCR and web scrapping in order to check plagiarism in assignments submitted by students. The students have the option to submit assignments in digital or handwritten image format. The web app compares the assignments to assignments of other students as well as to web resources like Geeks For Geeks
+          </p>
+          <div>
+           
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+
+    <!-- end who section -->
+
+    <!-- feature section  -->
+    <section class="feature_section layout_padding">
+      <div class="container">
+        <h2 class="text-uppercase">
+          Our Features
+        </h2>
+      </div>
+      <div class="">
+        <div class="feature_card-container layout_padding2">
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="{% static 'plagiarism/images/f1.png' %}" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                CLEAN CODES
+              </h4>
+              <p>
+                Easy to understand and open source code that is well documented that makes it easier to customize and improve the web app.
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="{% static 'plagiarism/images/f2.png' %}" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                Extensive Database
+              </h4>
+              <p>
+                The app has a database of about 8k articles published on Geeks for Geeks
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="{% static 'plagiarism/images/f3.png' %}" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                Human Friendly Result
+              </h4>
+              <p>
+                The app uses human friendly algorithm like Sequence Matcher in the Front end to display plagiarised texts while uses more complex BERT algo to display plagiarism score
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="{% static 'plagiarism/images/f4.png' %}" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                Syntax and Semantic Similarity
+              </h4>
+              <p>
+                Handles both types of similarities- Syntax similarity(same words used) as well as semantic similarity (re-phrasing of sentences)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end feature section -->
+
+    <!-- info section -->
+    <section class="info_section layout_padding">
+      <div class="container info_content">
+
+        <div
+          class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline"
+        >
+          <div class="social-box">
+            <a href="">
+              <img src="images/fb.png" alt="" />
+            </a>
+
+            <a href="">
+              <img src="images/twitter.png" alt="" />
+            </a>
+            <a href="">
+              <img src="images/linkedin1.png" alt="" />
+            </a>
+            <a href="">
+              <img src="images/instagram1.png" alt="" />
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- end info section -->
+
+    <!-- footer section -->
+  
+    <!-- footer section -->
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").classList.toggle("menu_width");
+        document
+          .querySelector(".custom_menu-btn")
+          .classList.toggle("menu_btn-style");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plagiarism</title>
+    <!-- Basic -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Mobile Metas -->
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Newsoft</title>
+
+    <!-- slider stylesheet -->
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'plagiarism/css/bootstrap.css' %}"/>
+
+    <!-- fonts style -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+            rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="{% static 'plagiarism/css/style.css' %}" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="{% static 'plagiarism/css/responsive.css' %}" rel="stylesheet"/>
+</head>
+<style>
+    #myProgress {
+  width: 100%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: blue;
+}
+</style>
+<body>
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+                <a class="navbar-brand" href="#">
+                    <span>
+                      GBPUAT SIMILARITY CHECKER
+                    </span>
+                  </a>
+
+                <div class="navbar-collapse" id="">
+                    <div
+                            class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3"
+                    >
+                        <ul class="navbar-nav  mr-5">
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="/accounts/login">
+                                    {% if username %}
+                                    <span>{{ username }} </span>
+                                    {% else %}
+                                    <span>Login </span>
+                                    {% endif %}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="custom_menu-btn">
+                        <button onclick="openNav()">
+                            <span class="s-1"> </span>
+                            <span class="s-2"> </span>
+                            <span class="s-3"> </span>
+                        </button>
+                    </div>
+                    <div id="myNav" class="overlay">
+                        <div class="overlay-content">
+                            <a href="/plagiarism/">Home</a>
+                            <a href="/plagiarism/checker">Plagiarism Checker</a>
+                            <a href="/plagiarism/about">About</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+        <div class="container">
+            <div
+                    id="carouselExampleControls"
+                    class="carousel slide"
+                    data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="slider_item-box">
+                            <div class="slider_item-container">
+
+                                    <form action="checker" method="POST" id = "myform" style="width:50%">
+                                        {% csrf_token %}
+                                        <input type="text" name="input_dir" id="input_dir"
+                                               placeholder="Enter Path to Directory Here" style="width:100%; height:40px">
+                                               
+                                        <center>
+                                            <br><select name="method" id="method">
+                                            <option value="sequence_matcher">Sequence Matcher</option>
+                                            <option value="jaccard_algorithm">Jaccard Algorithm</option>
+                                            <option value="overlap">Set Overlap</option>
+                                            <option value="bert">Bert Semantic Check</option>
+                                        </select>
+                                    </center>
+
+                                    </form>
+                            </div>
+                            <br>
+                            <center><button onclick="move()" >Submit</button></center>
+                            <br><br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- end slider section -->
+</div>
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+<section class="about_section layout_padding">
+    <div class="container">
+        <h2 class="text-uppercase">
+            How it works
+        </h2>
+    </div>
+
+    <div class="container">
+        <div class="about_card-container layout_padding2-top">
+            <div class="about_card">
+                <div class="about-detail">
+                    <div class="about_img-container">
+                        <div class="about_img-box">
+                            <img src="{% static 'plagiarism/images/work1.png' %}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="card_detail-ox">
+                        <h4>
+                            TEXT SIMILARITY DETECTION
+                        </h4>
+                        <p>
+                            Uses the best industry algorithms like BERT and Sequence Matcher to give quick and effective assignment plagiarism detection
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="about_card">
+                <div class="about-detail">
+                    <div class="about_img-container">
+                        <div class="about_img-box">
+                            <img src="{% static 'plagiarism/images/work2.png' %}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="card_detail-ox">
+                        <h4>
+                            OCR FACILITY
+                        </h4>
+                        <p>
+                            Uses Machine Learning to convert image assignments submitted by students into text format
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="about_card">
+                <div class="about-detail">
+                    <div class="about_img-container">
+                        <div class="about_img-box">
+                            <img src="{% static 'plagiarism/images/work3.png' %}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="card_detail-ox">
+                        <h4>
+                            EASY TO USE
+                        </h4>
+                        <p>
+                            Well documented and user-centric User Interface (UI) that makes the task of assignment checking easy
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script>
+    var i = 0;
+function move() {
+    document.getElementById("myform").submit();
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 50);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+         
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+
+} function openNav() {
+        document.getElementById("myNav").classList.toggle("menu_width");
+        document
+          .querySelector(".custom_menu-btn")
+          .classList.toggle("menu_btn-style");
+      }
+</script>
+</html>
